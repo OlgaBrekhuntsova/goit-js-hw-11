@@ -15,5 +15,5 @@ export function getImagesByQuery(query) {
   return axios
     .get('', { params })
     .then(res => res.data)
-    .catch(e => alertToast.show(e));
+    .catch(e => alertToast.show(e.message));
 }

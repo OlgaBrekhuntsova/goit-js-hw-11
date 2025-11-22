@@ -24,6 +24,12 @@ refs.formEle.addEventListener('submit', e => {
   showLoader();
   getImagesByQuery(query)
     .then(data => {
+      try {
+        data.total;
+      } catch {
+        alertToast.show('notExpected');
+        return;
+      }
       if (!data.total) {
         alertToast.show('notFound');
       } else {
@@ -47,11 +53,13 @@ export const alertToast = {
     noSearchParams: 'Please fill out input field.',
     notFound:
       'Sorry, there are no images matching your search query. Please, try again!',
+    notExpected: "Recived data doesn't have expected structure.",
   },
   show(messageKey) {
     const message = this.message[messageKey]
       ? this.message[messageKey]
       : messageKey;
+
     iziToast.show({
       message: message,
       position: 'topRight',
