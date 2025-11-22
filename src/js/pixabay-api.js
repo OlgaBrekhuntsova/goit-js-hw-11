@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { alertToast } from '../main';
-axios.defaults.baseURL = 'https://pixabay.com/api';
+axios.defaults.baseURL = 'https://pixabay.com/api/';
 
 const params = {
   key: '19987924-b7a96d980a74a373c9da34c4a',
