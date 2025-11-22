@@ -1,12 +1,7 @@
-.feedback-form {
-  width: 408px;
+.form {
   display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  padding: 24px;
   gap: 8px;
-  align-items: flex-start;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  align-items: center;
   font-family: Montserrat;
   font-weight: 400;
   font-style: Regular;
@@ -16,9 +11,9 @@
   color: #2e2f42;
 }
 
-.feedback-form input,
-.feedback-form textarea {
-  width: 360px;
+.form input {
+  width: 272px;
+  height: 40px;
   border-radius: 6px;
   padding: 8px 12px;
   border: 1px solid #808080;
@@ -37,23 +32,17 @@ label input {
   height: 40px;
 }
 
-label textarea {
-  height: 80px;
-}
-
-label input:hover,
-label textarea:hover {
+label input:hover {
   border: 1px solid #000000;
 }
 
-label input:focus-visible,
-label textarea:focus-visible {
+label input:focus-visible {
   border: 1px solid #808080;
   outline: none;
 }
 
-.feedback-form button {
-  width: 95px;
+.form button {
+  width: 91px;
   height: 40px;
   border-radius: 8px;
   padding: 8px 16px;
@@ -66,10 +55,9 @@ label textarea:focus-visible {
   font-size: 15px;
   line-height: inherit;
   letter-spacing: inherit;
-  margin-top: 8px;
 }
 
-.feedback-form button:hover {
+.form button:hover {
   background-color: #6c8cff;
   transition: background-color 0.2s ease;
 }
