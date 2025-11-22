@@ -65,7 +65,7 @@ export const alertToast = {
       position: 'topRight',
       backgroundColor: '#EF4040',
       messageColor: '#ffffff',
-      iconUrl: './img/x-octagon.svg',
+      iconUrl: '../img/x-octagon.svg',
       timeout: 10000,
       closeOnClick: true,
     });
