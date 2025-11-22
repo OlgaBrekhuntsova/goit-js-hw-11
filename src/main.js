@@ -1,4 +1,5 @@
 import { getImagesByQuery } from './js/pixabay-api';
+import errorIcon from './img/x-octagon.svg';
 
 import {
   clearGallery,
@@ -65,7 +66,7 @@ export const alertToast = {
       position: 'topRight',
       backgroundColor: '#EF4040',
       messageColor: '#ffffff',
-      iconUrl: '../img/x-octagon.svg',
+      iconUrl: errorIcon,
       timeout: 10000,
       closeOnClick: true,
     });
