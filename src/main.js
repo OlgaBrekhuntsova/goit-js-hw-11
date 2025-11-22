@@ -42,15 +42,18 @@ refs.formEle.addEventListener('click', e => {
   }
 });
 
-const alertToast = {
+export const alertToast = {
   message: {
     noSearchParams: 'Please fill out input field.',
     notFound:
       'Sorry, there are no images matching your search query. Please, try again!',
   },
   show(messageKey) {
+    const message = this.message[messageKey]
+      ? this.message[messageKey]
+      : messageKey;
     iziToast.show({
-      message: this.message[messageKey],
+      message: message,
       position: 'topRight',
       backgroundColor: '#EF4040',
       messageColor: '#ffffff',

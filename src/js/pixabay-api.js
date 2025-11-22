@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import { alertToast } from '../main';
 axios.defaults.baseURL = 'https://pixabay.com/api';
 
 const params = {
@@ -15,5 +15,5 @@ export function getImagesByQuery(query) {
   return axios
     .get('', { params })
     .then(res => res.data)
-    .catch(e => console.log(e));
+    .catch(e => alertToast.show(e));
 }
